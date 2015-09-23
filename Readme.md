@@ -1,6 +1,6 @@
 # uLogin
 
-Donate link: http://ulogin.ru  
+Donate link: https://ulogin.ru
 Tags: ulogin, login, social, authorization  
 Requires at least: 5.4  
 Tested up to: 5.7.3  
