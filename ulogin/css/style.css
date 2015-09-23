@@ -1,0 +1,60 @@
+.base-settings {
+    float: left;
+    width: 45%;
+}
+
+.base-settings h3 {
+    margin: 0 0 10px 0;
+}
+
+.base-settings .base-setting-save {
+    margin-bottom: 0;
+}
+
+.base-settings .list-option li span, .section-slider-action .custom-text {
+    display: inline-block;
+    width: 190px;
+}
+
+.base-settings .list-option li {
+    margin: 0 0 10px 0;
+}
+
+.base-settings .list-option li input, .base-settings .list-option li select {
+    margin: 0;
+}
+
+.entity-table-tbody tr td {
+    border: 1px solid #D3D3D3;
+    cursor: move;
+    text-align: left;
+}
+
+.entity-table-tbody tr td {
+    padding: 5px;
+    vertical-align: top;
+}
+
+.entity-table-tbody tr td.type {
+    text-align: center;
+}
+
+.main-settings-container .main-settings-ulogin ul li {
+    margin: 10px 10px 0;
+}
+
+.main-settings-container .main-settings-ulogin .btn-holder {
+    margin: 15px 0;
+    font-size: 0;
+}
+
+.main-settings-container .main-settings-ulogin .button {
+    margin: 15px 0;
+}
+
+.main-settings-container .main-settings-ulogin .help-text {
+    font-size: 12px;
+    color: #A3A3A3;
+}
+
+.widget-table-body
