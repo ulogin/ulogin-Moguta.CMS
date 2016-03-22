@@ -22,7 +22,7 @@ if(!$check) {
 	return false;
 }
 $user_id = getUserIdByIdentity($u_user['identity']);
-if(isset($user_id) && !empty($user_id)) {
+if(!empty($user_id)) {
 	$d = USER::getUserById($user_id);
 	if($user_id > 0 && $d->id > 0) {
 		uloginCheckUserId($user_id);
@@ -31,10 +31,11 @@ if(isset($user_id) && !empty($user_id)) {
 	}
 } else $user_id = ulogin_registration_user($u_user);
 if($user_id > 0) {
-	$_SESSION['userAuthDomain'] = $_SERVER['SERVER_NAME'];
 	$userData = USER::getUserById($user_id);
+	$userData->hash = md5($userData->email.$userData->date_add.$_SERVER['REMOTE_ADDR']);
+	$_SESSION['userAuthDomain'] = $_SERVER['SERVER_NAME'];
 	$_SESSION['user'] = $userData;
-	header('Location: ' . urldecode($_GET['backurl']));
+	$_SESSION['loginAttempt']='';
 }
 header('Location: ' . urldecode($_GET['backurl']));
 /**
@@ -168,5 +169,3 @@ function ulogin_registration_user($u_user, $in_db = 0) {
 
 	return false;
 }
-
-?>

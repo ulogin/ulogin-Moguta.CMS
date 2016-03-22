@@ -3,8 +3,8 @@
 Donate link: https://ulogin.ru
 Tags: ulogin, login, social, authorization  
 Requires at least: 5.4  
-Tested up to: 5.7.3  
-Stable tag: 2.0  
+Tested up to: 6.4  
+Stable tag: 2.0.1  
 License: GNU General Public License, version 2  
 
 **uLogin** — это инструмент, который позволяет пользователям получить единый доступ к различным Интернет-сервисам без необходимости повторной регистрации,
@@ -60,6 +60,10 @@ License: GNU General Public License, version 2
 
 
 ## Изменения
+
+####2.0.1.
+* Исправлена совместимость с версией Moguta.CMS 6.3 и 6.4
+* Исправлено отсутствие виджета привязки соцсетей в профиле, если нет привязок.
 
 ####2.0.0.
 * Релиз.

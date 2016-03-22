@@ -229,17 +229,16 @@ class ULoginAuth {
 			</style>
 			<p class="change-pass-title">' . self::$lang['ULOGIN_SYNC'] . '</p>' . self::getPanelCode(1) . '<p>' . self::$lang['ULOGIN_SYNC_HELP'] . '</p>
             <p class="change-pass-title">' . self::$lang['ULOGIN_SYNC_LIST'] . '</p>';
-		if($networks) {
-			$output .= '<div id="ulogin_accounts">';
-			foreach($networks as $network) {
-				if($network['user_id'] = $user_id)
-					$output .= "<div data-ulogin-network='{$network['network']}'  data-ulogin-identity='{$network['identity']}' class='ulogin_network big_provider {$network['network']}_big'></div>";
-			}
-			$output .= '</div>
-            <p>' . self::$lang['ULOGIN_SYNC_DELETE'] . '</p>';
 
-			return $output;
+		$output .= '<div id="ulogin_accounts">';
+		foreach($networks as $network) {
+			if($network['user_id'] = $user_id)
+				$output .= "<div data-ulogin-network='{$network['network']}'  data-ulogin-identity='{$network['identity']}' class='ulogin_network big_provider {$network['network']}_big'></div>";
 		}
+		$output .= '</div>
+		<p>' . self::$lang['ULOGIN_SYNC_DELETE'] . '</p>';
+
+		return $output;
 
 		return '';
 	}
